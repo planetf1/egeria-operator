@@ -4,4 +4,5 @@ metadata:
   name: egeria-instance
 spec:
   # Add fields here
+  # Number of egeria platforms
   size: 3
