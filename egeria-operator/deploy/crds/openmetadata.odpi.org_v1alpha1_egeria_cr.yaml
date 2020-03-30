@@ -1,0 +1,7 @@
+apiVersion: openmetadata.odpi.org/v1alpha1
+kind: Egeria
+metadata:
+  name: egeria-instance
+spec:
+  # Add fields here
+  size: 3

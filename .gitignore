@@ -1,15 +1,40 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+# SPDX-License-Identifier: Apache-2.0
+# Copyright Contributors to the ODPi Egeria project.
+#
+# Link to help info - https://git-scm.com/docs/gitignore
+#
 
-# Test binary, built with `go test -c`
-*.test
+# IntelliJ
+*.iml
+**.iml
+*.ipr
+*.iws
+.idea
+venv
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+# Eclipse
+.cache
+.classpath
+.project
+.checkstyle
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+.settings
+.externalToolBuilders
+maven-eclipse.xml
+
+# Mac OS
+__MACOSX
+
+# other files
+.DS_Store
+*.swp
+
+# exclude temporary lock files
+*.lock
+log
+
+# vscode editor
+**/.vscode*/**
+**/.factorypath
+**/**.code-workspace
+
