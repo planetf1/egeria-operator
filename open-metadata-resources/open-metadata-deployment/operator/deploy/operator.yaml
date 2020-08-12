@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: egeria-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: egeria-operator
+  template:
+    metadata:
+      labels:
+        name: egeria-operator
+    spec:
+      serviceAccountName: egeria-operator
+      containers:
+        - name: egeria-operator
+          # Replace this with the built image name
+          image: docker.io/planetf1/egeria-operator
+          command:
+          - egeria-operator
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "egeria-operator"
